@@ -1,0 +1,14 @@
+@font-face { font-family: MS; src: url('monospace.tff'); }
+#main{
+
+}
+#txtbox{
+
+}
+#output {
+  
+}
+body {
+  font-family: monospace;
+  background-color: #c9ddff
+}

@@ -1,0 +1,52 @@
+<html><head>
+  <meta charset="utf-8">
+  <title>title</title>
+
+  <link rel = "stylesheet" type = "text/css" href = "style.css" />
+</head><body onload="brython(1)">
+
+<div id="main">
+    <div>
+      <p><input id="txtbox" autocomplete="off" placeholder="test">
+      <!-- ignore this
+      br><select id="dropdwn" autocomplete="off">
+          <option value=1>one
+          <option value=2>two
+          <option value=3>three
+      </select-->
+      <br><textarea id="txtar" rows=3 cols=30 autocomplete="off" placeholder="type somethin"></textarea>
+    </div>
+
+    <button id="run">run python script w/ user input!!</button>
+    <div id="output"></div>
+
+<!-- python start -->
+    <script type="text/python" id="script16">
+    from browser import document, html
+
+    def show_values(event):
+        input = document["txtbox"].value
+        newInput = "* "+ input +" *"
+        stars = '*' * (len(input) + 4)
+        text = document["txtar"].value
+        newText = (text.upper()+ "! ") *3
+        document["output"].clear()
+        document["output"] <= ("{}".format(stars),
+            html.BR(), "{}".format(newInput),
+            html.BR(), "{}".format(stars), html.BR(),
+            html.BR(), "{}".format(newText)
+            )
+
+    document['run'].bind('click', show_values)
+    </script>
+<!-- python end -->
+
+<!-- select = document["dropdwn"]
+num = select.options[select.selectedIndex].value -->
+</div>
+
+<!-- linking brython -->
+<script src="brython.js"></script>
+<script src="brython_stdlib.js"></script>
+
+</body></html>
