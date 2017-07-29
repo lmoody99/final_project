@@ -1,0 +1,39 @@
+value_dict = {"good": 0.75, "well": 0.25, "bad": -0.5} #dictionary - allows you to store values of an object and call upon. ex print(d["good"]) would return .75
+
+wordstring = 'good many good words as well as many bad ones'
+
+wordlist = wordstring.split()
+wordfreq = [wordlist.count(w) for w in wordlist] #function for how often words repeat
+total_words = []
+senti_values = [] # list of sentiment values before averaged
+
+
+#print("String\n" + wordstring +"\n") #prints the original string
+#print("List\n" + str(wordlist) + "\n") #prints list of separated words
+#print("Frequencies\n" + str(wordfreq) + "\n") #prints how often words occurs
+
+freq_dict = {}
+for i in range(len(wordlist)):
+    freq_dict[wordlist[i]] = wordfreq[i]
+
+
+freq_dict = {} #list to put freq dictionary in
+for i in range(len(wordlist)): #function that defines the frequecy for words
+    freq_dict[wordlist[i]] = wordfreq[i]
+
+#print ("Word Frequency Dictionary")
+#print (freq_dict)
+
+word_set = set(wordlist) #removes duplicate words from wordlist
+print (word_set) # prints out words without repetition
+
+for i in word_set:
+    if i in value_dict and freq_dict: #checks if word in text has assigned dictionary values
+        print (value_dict[i]*freq_dict[i])
+        senti_values.append(value_dict[i]*freq_dict[i]) #adds total sentiment value to sent_value list
+        total_words.append(freq_dict[i]) #adds frequency of word to total_words list for averaging later on
+        print (i) #prints the word
+    else:
+        print("nada")
+print (senti_values)
+print (total_words)
