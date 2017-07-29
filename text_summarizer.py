@@ -1,5 +1,6 @@
 import spacy
 from collections import Counter, defaultdict
+from operator import itemgetter
 
 nlp = spacy.load('en')
 
@@ -33,15 +34,17 @@ def summarize_text(textfile, lengthOfSummary):
         eachSent = [i, sentPoint] #array containing the index of the currentSentence and its points
         sentenceList.append(eachSent) #add eachSent to the sentenceList
 
-    #finding the sentence with the maximum number of points
-    max = sentenceList[0][1] #sentenceList[variabe][1] indicates the points associated with the variable sentence
-    index = 0
+    #sorting the sentences by point value and putting them in a list, sorting those by sentence index and adding it to a string
+    sortedSentByPoints = sorted(sentenceList, key=itemgetter(1), reverse=True)
+    justSentList = []
+    for x in range(0,lengthOfSummary):
+        justSentList.append(sortedSentByPoints[x])
+    justSentList = sorted(justSentList, key=itemgetter(0), reverse=False)
+    summary = ""
+    for index in range(0,len(justSentList)):
+        summary+=str(sentences[justSentList[index][0]]) + " "
 
-    for i in range(0,len(sentenceList)):
-        if sentenceList[i][1]>max:
-            max = sentenceList[i][1]
-            index = i
-    return sentences[index] #returns sentence with maximum points 
+    return summary
 
-
-print(summarize_text('pride and prejudice.txt',1))
+length = input("How long should the summary be in sentences?: ")
+print(summarize_text('pride and prejudice.txt',length))
