@@ -10,5 +10,8 @@
 }
 body {
   font-family: monospace;
-  background-color: #c9ddff
+  background:  url("http://rhyva.info/wp-content/uploads/2016/09/unique-white-marble-background-5.jpg") no-repeat fixed center; 
+  background-repeat: repeat;
+  background-width:100%;
+  background-height: 100%;
 }
