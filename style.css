@@ -3,7 +3,9 @@
 
 }
 #txtbox{
-
+width: 300px;
+padding: 25px;
+margin: 25px;
 }
 #output {
   
@@ -30,3 +32,4 @@ grid-auto-rows: minmax(100px, auto);
 .two {
 	grid-column: 2/3;
     grid-row: 2;
+}
