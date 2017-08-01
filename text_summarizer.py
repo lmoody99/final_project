@@ -1,3 +1,4 @@
+# coding = utf-8
 import spacy
 from collections import Counter, defaultdict
 from operator import itemgetter
@@ -47,4 +48,5 @@ def summarize_text(textfile, lengthOfSummary):
     return summary
 
 length = input("How long should the summary be in sentences?: ")
+print
 print(summarize_text('pride and prejudice.txt',length))
