@@ -15,3 +15,18 @@ body {
   background-width:100%;
   background-height: 100%;
 }
+
+.grid {
+display: grid;
+grid-tempate-columns: repeat(3, 1fr);
+grid-gap; 10px;
+grid-auto-rows: minmax(100px, auto);
+}
+
+.one {
+	grid-column:2/3;
+    grid-row: 1;
+   }
+.two {
+	grid-column: 2/3;
+    grid-row: 2;
