@@ -7,21 +7,21 @@
 
 <div id="main">
     <div>
-      <p><input id="txtbox" autocomplete="off" placeholder="test">
+      <p><input id="txtbox" autocomplete="off" placeholder="number">
       <!-- ignore this
       br><select id="dropdwn" autocomplete="off">
           <option value=1>one
           <option value=2>two
           <option value=3>three
       </select-->
-      <br><textarea id="txtar" rows=3 cols=30 autocomplete="off" placeholder="type somethin"></textarea>
+      <br><textarea id="txtar" rows=3 cols=30 autocomplete="off" placeholder="text"></textarea>
     </div>
 
-    <button id="run">run python script w/ user input!!</button>
+    <button id="run">summarize text</button>
     <div id="output"></div>
 
 <!-- python start -->
-    <script type="text/python" id="script16">
+    <!-- <script type="text/python" id="script16">
     from browser import document, html
 
     def show_values(event):
@@ -38,7 +38,7 @@
             )
 
     document['run'].bind('click', show_values)
-    </script>
+    </script> -->
 <!-- python end -->
 
 <!-- select = document["dropdwn"]
@@ -48,5 +48,5 @@ num = select.options[select.selectedIndex].value -->
 <!-- linking brython -->
 <script src="brython.js"></script>
 <script src="brython_stdlib.js"></script>
-
+<script type="text/python" src="textsum.py"/>
 </body></html>
