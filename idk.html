@@ -3,23 +3,61 @@
   <title>title</title>
 
   <link rel = "stylesheet" type = "text/css" href = "style.css" />
+ 
+  
 </head>
   
-<body onload="brython(1)">
-  <center>
+<body>
 
-<div id="main">
+<center>
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">--MENU--</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+
+
+<h2 class="box"> T L ; D R</h2>
+
+<div id="main"> 
     <div>
-      <p><input id="txtbox" class="one" class="grid" autocomplete="off" placeholder="number">
+      <p><textarea id="txt" class="one" class="grid" rows=3 cols=30 autocomplete="off" placeholder="What would you like to summarize?"></textarea> <br> <br> <br>
+      
+      <button id="run">summarize text</button>
+    <div id="output"></div>
 
-      <br><textarea id="txtar" class="two" class="grid" rows=3 cols=30 autocomplete="off" placeholder="text"></textarea>
+      <br><textarea id="txtar" class="two" class="grid" rows=3 cols=30 autocomplete="off" placeholder="Summary will show up here."></textarea>
     </div>
 
-    <button id="run">summarize text</button>
-    <div id="output"></div>
+
 
 </div>
 
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
 
 </center>
 </body></html>
