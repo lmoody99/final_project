@@ -1,17 +1,21 @@
-@font-face { font-family: MS; src: url('monospace.tff'); }
+<style>  
+@font-face { font-family: courier; src: url('monospace.tff'); }
 #main{
 
 }
-#txtbox{
-width: 300px;
+#txtar, #txt{
+width: 75%;
 padding: 25px;
-margin: 25px;
+margin: 20px;
 }
+
+
+
 #output {
   
 }
 body {
-  font-family: monospace;
+  font-family: bodoni;
   background:  url("http://rhyva.info/wp-content/uploads/2016/09/unique-white-marble-background-5.jpg") no-repeat fixed center; 
   background-repeat: repeat;
   background-width:100%;
@@ -32,4 +36,63 @@ grid-auto-rows: minmax(100px, auto);
 .two {
 	grid-column: 2/3;
     grid-row: 2;
+}  
+
+
+
+
+
+.box {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    font-size: 40px;
+    border: none;
+    width:100%;
+    cursor: pointer;
+    float: center;
 }
+
+.dropbtn {
+    background-color: #000000;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #444444;
+}
+
+.dropdown {
+    float: left;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+</style>
