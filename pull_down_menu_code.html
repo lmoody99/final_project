@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Page</title>
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body style="background-color:powderblue;">
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<a href="https://rapolusakura.github.io/portfolios/aboutme.html" target = "_blank">Home</a> 
+<a href="https://rapolusakura.github.io/portfolios/projects.html" target="_blank"> Projects</a>
+<a href="https://rapolusakura.github.io/portfolios/additionalinfo.html" target="_blank">About Me</a> 
+<a href="https://rapolusakura.github.io/portfolios/contact.html" target="_blank">Contact</a> 
+</div>
+
+<div id="main">
+<h1>Sakura Rapolu</h1>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+<hr>
+<img src="http://i.imgur.com/bT3mR3D.jpg"width="325" height="225" alt="The Scream">
+  <h2>Bio</h2>
+<p>Hi, my name is Sakura Rapolu and I am a current senior at Dougherty Valley High School.</p>
+<p>
+I am a member of Girls Who Code and I have a passion for coding, playing lacrosse, debating, writing poetry, and combatting food waste!</p>
+<hr> 
+  <h2>Languages</h2> 
+  <p>I am familiar with Scratch, Java, Python, C#, and HTML/CSS.</p>
+    
+<address>
+Sakura Rapolu<br> 
+CA, USA
+</address> 
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+    
+</body>
+</html> 
