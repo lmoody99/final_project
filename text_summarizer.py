@@ -21,6 +21,8 @@ def summarize_text(textfile, lengthOfSummary):
             keywords[chunk.lemma_] += 1
     keyList = keywords.most_common(10)
     sentences = [s for s in doc.sents]
+    for sentence in sentences:
+        print(sentence)
     sentenceList = [] #a 2D array containing the index of each sentence and its score
 
     #assigining points to each sentence
