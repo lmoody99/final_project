@@ -117,3 +117,38 @@ grid-column: 0-4;
     margin: 4px 2px;
     cursor: pointer;
 }
+
+div.transbox {
+  margin: 20px;
+  height: 80%;
+  background-color: #ffffff;
+
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+.image-cropper {
+max-width: 100px;
+height: auto;
+position: relative;
+overflow: hidden;
+}
+
+.image-cropper img{
+    display: block;
+  margin: 0 auto;
+  height: auto;
+   width: 150%; 
+  margin: 0 0 0 -20%;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+-o-border-radius: 50%;
+border-radius: 50%;  
+}
