@@ -51,17 +51,19 @@ for char in chars:
 
 print
 
-for char in chars:
-    prettyList = []
-    person = char[0]
-    charList = get_character_adjectives(processed_text, person)
-    if(charList != []):
-        for x in range(len(charList)):
-            if(charList[x]!="-PRON-" and charList[x] not in prettyList):
-                prettyList.append(charList[x])
-        if len(prettyList)<2:
-            continue
-        print char[0] + ": " #how to not do a println?
-        for elem in prettyList:
-            print(elem)
-        print
+def print_char_adj():
+    for char in chars:
+        prettyList = []
+        person = char[0]
+        charList = get_character_adjectives(processed_text, person)
+        if(charList != []):
+            for x in range(len(charList)):
+                if(charList[x]!="-PRON-" and charList[x] not in prettyList):
+                    prettyList.append(charList[x])
+            if len(prettyList)<2:
+                continue
+            print char[0] + ": " #how to not do a println?
+            for elem in prettyList:
+                print(elem)
+            print
+print_char_adj()
